@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Kaizen</title>
+    
+    <!-- PWA Settings -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#4A5D4E" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Kaizen" />
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: '#FDFCF8',
+              surface: '#FFFFFF',
+              text: '#2D2D2D',
+              textLight: '#5C5C5C',
+              backgroundDark: '#1C1C1E',
+              surfaceDark: '#2C2C2E',
+              textDark: '#E5E5E7',
+              textLightDark: '#A1A1AA',
+              primary: 'rgb(var(--color-primary) / <alpha-value>)', 
+              primaryLight: 'rgb(var(--color-primary-light) / <alpha-value>)',
+              secondary: 'rgb(var(--color-secondary) / <alpha-value>)', 
+              secondaryLight: 'rgb(var(--color-secondary-light) / <alpha-value>)',
+            },
+            fontFamily: {
+              serif: ['"DM Serif Display"', 'serif'],
+              sans: ['"Nunito"', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.8s ease-out forwards',
+              'slide-up': 'slideUp 0.6s ease-out forwards',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-subtle': 'bounceSubtle 0.3s ease-in-out',
+            },
+            keyframes: {
+              fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+              slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+              bounceSubtle: { '0%, 100%': { transform: 'scale(1)' }, '50%': { transform: 'scale(1.1)' } },
+              floatUp: { '0%': { opacity: '1', transform: 'translateY(0) scale(1)' }, '100%': { opacity: '0', transform: 'translateY(-100px) scale(0)' } }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      :root {
+        --color-primary: 74 93 78;
+        --color-primary-light: 107 130 112;
+        --color-secondary: 196 143 123;
+        --color-secondary-light: 214 169 152;
+        --sat: env(safe-area-inset-top);
+        --sab: env(safe-area-inset-bottom);
+      }
+      body {
+        background-color: #FDFCF8;
+        color: #2D2D2D;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior-y: none;
+      }
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+      .dark body { background-color: #1C1C1E; color: #E5E5E7; }
+      .pt-safe-top { padding-top: max(1rem, var(--sat)); }
+      .pb-safe-bottom { padding-bottom: max(1rem, var(--sab)); }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "canvas-confetti": "https://esm.sh/canvas-confetti@^1.9.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <!-- Changed /index.tsx to ./index.tsx for GitHub Pages compatibility -->
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
