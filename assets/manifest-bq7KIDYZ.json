@@ -1,0 +1,21 @@
+{
+  "short_name": "Kaizen",
+  "name": "Kaizen: 1% Better",
+  "icons": [
+    {
+      "src": "https://api.iconify.design/noto:seedling.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    },
+    {
+      "src": "https://api.iconify.design/noto:seedling.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4A5D4E",
+  "background_color": "#FDFCF8",
+  "orientation": "portrait"
+}
