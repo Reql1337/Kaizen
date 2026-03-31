@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./public/logo.svg" width="200" alt="1% Kaizen Logo"/>
+  <img src="./public/logo.svg" width="210" alt="1% Kaizen Logo"/>
   <h1>Kaizen: 1% Better Every Day</h1>
   <p><strong>A cozy, minimalist self-improvement application focusing on tiny daily progress.</strong></p>
 </div>
